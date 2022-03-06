@@ -1,0 +1,19 @@
+<div class="banner">
+  <div class="slider">
+    <div
+      class="item"
+      *ngFor="let slide of galary; index as i"
+      [ngClass]="{ active: count == i }"
+    >
+      <img src="{{ slide.path }}" title="{{ slide.title }}" class="img" />
+    </div>
+    <div class="info">
+      <ul>
+        <li
+          *ngFor="let slide of galary; index as i"
+          [ngClass]="{ activebtn: count == i }"
+        ></li>
+      </ul>
+    </div>
+  </div>
+</div>
